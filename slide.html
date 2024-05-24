@@ -7,57 +7,100 @@
     <link rel="stylesheet" href="css/slide/slide.css" />
   </head>
   <body>
-    <section>
-      <!-- img slider start -->
-      <div class="slider">
-        <div class="slides">
-          <!-- Corrected class name -->
-          <!-- radio button start -->
-          <input type="radio" name="radio-btn" id="radio1" />
-          <input type="radio" name="radio-btn" id="radio2" />
-          <input type="radio" name="radio-btn" id="radio3" />
-          <!-- radio button end -->
-          <!-- slide img start -->
-          <div class="slide first">
-            <!-- Each slide should have the class .slide -->
-            <img src="photo_silde/slide1.jpg" alt="" />
-          </div>
-          <div class="slide">
-            <img src="photo_silde/slide2.jpg" alt="" />
-          </div>
-          <div class="slide">
-            <img src="photo_silde/slide3.jpg" alt="" />
-          </div>
-        </div>
-        <!-- img slider end -->
-        <!-- automatic navigation start -->
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-        </div>
-        <!-- automatic navigation end -->
-      </div>
-      <!-- manual navigation start -->
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <!-- Add content inside labels -->
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-      </div>
-    </section>
+    <header>
+      <h1 id="logo">LOGO+NAME</h1>
 
-    <!-- manual navigation end -->
-    <script type="text/javascript">
-      var counter = 1;
-      setInterval(function () {
-        document.getElementById("radio" + counter).checked = true;
-        counter++;
-        if (counter > 3) {
-          counter = 1;
-        }
-      }, 5000);
-    </script>
-    <div></div>
+      <button id="openNav" onclick="openNav()">OPEN NAV</button>
+      <nav>
+        <button id="close-nav" onclick="closeNav()">X</button>
+        <h2>NOM PRENOM</h2>
+        <h2>EMAIL</h2>
+        <h2>MATRICULE</h2>
+        <div>
+          <a href="">ARTICLE1</a>
+          <a href="">ARTICLE2</a>
+          <a href="">ARTICLE3</a>
+        </div>
+      </nav>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img
+            class="carousel-item"
+            src="https://cdn.takeoutcentral.com/restlogos/rest839menu_hero32.jpg"
+            alt=""
+          />
+
+          <img
+            class="carousel-item"
+            src="https://www.russellhendrix.com/Images/location_patio_season.jpg"
+            alt=""
+          />
+
+          <img
+            class="carousel-item"
+            src="https://www.russellhendrix.com/Images/location_patio_season.jpg"
+            alt=""
+          />
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-control prev">&lt;</button>
+          <button class="carousel-control next">&gt;</button>
+        </div>
+      </div>
+    </header>
+
+    <h1 id="titre">Bienvenu dans notre restaurant</h1>
+
+    <main>
+      <section id="articles">
+        <article>
+          <a href=""><img width="200px" src="pizza.png" alt="" /></a>
+          <div>
+            <h2>Article1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              libero eius aut sint non accusantium vel cum aliquid nihil magnam
+              optio atque veritatis, eaque deleniti voluptatibus. Dolores
+              quaerat aliquam beatae.
+            </p>
+            <h4>More infos: <a href="">here</a></h4>
+          </div>
+        </article>
+        <article>
+          <a href=""><img width="200px" src="pizza.png" alt="" /></a>
+          <div>
+            <h2>Article2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              libero eius aut sint non accusantium vel cum aliquid nihil magnam
+              optio atque veritatis, eaque deleniti voluptatibus. Dolores
+              quaerat aliquam beatae.
+            </p>
+            <h4>More infos: <a href="">here</a></h4>
+          </div>
+        </article>
+        <article>
+          <a href=""><img width="200px" src="pizza.png" alt="" /></a>
+          <div>
+            <h2>Article3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              libero eius aut sint non accusantium vel cum aliquid nihil magnam
+              optio atque veritatis, eaque deleniti voluptatibus. Dolores
+              quaerat aliquam beatae.
+            </p>
+            <h4>More infos: <a href="">here</a></h4>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <h1>THIS IS AN AD</h1>
+      </aside>
+    </main>
+
+    <section></section>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,101 +1,137 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  background: white;
+  background-color: #FEFDED;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  margin: 10vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  min-width: 20vw;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 
-.slider {
-  width: 800px;
-  height: 500px;
+#openNav {
+  background: #4F6F52;
+  color: white;
+  border: none;
   border-radius: 10px;
-  overflow: hidden;
-}
-
-.slides {
-  width: 500%; /* Changed width to 500% */
-  height: 500px;
-  display: flex;
-}
-
-.slides input {
+  padding: 10px 20px;
+  font-size: 20;
   display: none;
-}
-
-.slide {
-  width: 20%;
-  transition: 2s;
-  position: relative; /* Added */
-}
-
-.slide img {
-  width: 800px;
-  height: 500px;
-}
-
-/* CSS for manual navigator */
-.navigation-manual {
   position: absolute;
-  width: 800px;
-  margin-top: 400px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid rgb(255, 255, 255);
-  padding: 5px;
-  border-radius: 10px;
+  top: 50px;
+  left: 20px;
+  z-index: 200;
   cursor: pointer;
-  transition: 1s;
 }
 
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
+nav {
+  position: fixed;
+  z-index: 200;
+  height: 100vh;
+  width: 300px;
+  background-color: red;
 }
 
-.manual-btn:hover {
-  background: black;
+nav h2 {
+  font-size: 18px;
 }
 
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -40%;
-}
-/*css for auto navig*/
-.navigation-auto {
+#logo {
   position: absolute;
-  display: flex;
-  width: 800px;
-  justify-content: center;
-  margin-top: -57px;
-}
-.navigation-auto div {
-  border: 2px solid #40d3dc;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-}
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background: #40d3dc;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background: #40d3dc;
+  top: 0;
+  left: 100px;
+  z-index: 100;
+  color: white;
+  font-size: 60px;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background: #40d3dc;
+#titre {
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2,
+h1 {
+  color: #4F6F52;
+}
+
+article img {
+  margin-right: 50px;
+  transition: all 0.3s;
+}
+
+article img:hover {
+  transform: scale(1.1);
+}
+
+article p {
+  text-align: justify;
 }
