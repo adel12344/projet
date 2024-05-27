@@ -135,3 +135,22 @@ article img:hover {
 article p {
   text-align: justify;
 }
+.intro {
+  
+ 
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+.Objectifs {
+  
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10vh 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
